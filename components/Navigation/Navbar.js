@@ -5,6 +5,7 @@ import { AiFillFile, AiOutlineMenuFold } from "react-icons/ai";
 import { FaUserTie, FaMoon } from "react-icons/fa";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import MobMenu from "./Mobile/MobNev";
 
 const Navbar = () => {
   // darknes setup
@@ -13,7 +14,14 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
-      <aside className="flex justify-between items-center gap-4">
+      <aside className="flex justify-between items-center gap-4 relative">
+        {/* mobile icon  */}
+        {
+          showMenu &&   <div
+              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+              className="block  md:hidden w-full h-auto overflow-hidden fixed left-0 top-0 z-30"
+            > <MobMenu/></div>
+        }
         {/* navbar left site  */}
         <div className="flex justify-between items-center w-1/2">
           {/* logo site  */}
@@ -74,7 +82,7 @@ const Navbar = () => {
             </div>
           </Link>
           {/* menu button  */}
-          <div className="flex justify-center items-center md:hidden cursor-pointer">
+          <div className="flex justify-center items-center md:hidden cursor-pointer z-50">
             {showMenu ? (
               <button onClick={() => setShowMenu(false)} className="text-2xl">
                 <MdCancel />
