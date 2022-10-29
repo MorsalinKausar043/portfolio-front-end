@@ -1,26 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* tailwind css utilities  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* cursor setup  */
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  /* transition: all 0.1s 0s ease-in-out; */
+  mix-blend-mode: difference;
+  z-index: 1000;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.big_cursor {
+  width: 50px;
+  height: 50px;
+  background: rgb(27, 190, 177);
+}
+.small_cursor {
+  width: 5px;
+  height: 5px;
+  background: rgb(202, 112, 38);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+*:active ~ .big_cursor {
+  width: 100px;
+  height: 100px;
+  transition: all 0.2s 0s ease-in-out;
 }
