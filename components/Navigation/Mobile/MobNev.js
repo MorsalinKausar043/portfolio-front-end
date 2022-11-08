@@ -1,7 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { AiFillFile, AiFillGithub, AiFillLinkedin, AiFillTwitterCircle  } from "react-icons/ai";
-import { MdEmail,MdLibraryBooks } from "react-icons/md";
+import {
+  AiFillFile,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+} from "react-icons/ai";
+import { MdEmail, MdLibraryBooks } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa";
 import { Slide } from "react-reveal";
 

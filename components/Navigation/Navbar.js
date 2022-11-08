@@ -9,19 +9,22 @@ import MobMenu from "./Mobile/MobNev";
 
 const Navbar = () => {
   // darknes setup
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
   // responsive menu bar setup
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <aside className="flex justify-between items-center gap-4 relative">
         {/* mobile icon  */}
-        {
-          showMenu &&   <div
-              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-              className="block  md:hidden w-full h-auto overflow-hidden fixed left-0 top-0 z-30"
-            > <MobMenu/></div>
-        }
+        {showMenu && (
+          <div
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+            className="block  md:hidden w-full h-auto overflow-hidden fixed left-0 top-0 z-30"
+          >
+            {" "}
+            <MobMenu />
+          </div>
+        )}
         {/* navbar left site  */}
         <div className="flex justify-between items-center w-1/2">
           {/* logo site  */}
@@ -40,16 +43,16 @@ const Navbar = () => {
             </span>
           </div>
           {/* dark button site  */}
-          <div className="text-xl md:text-2xl text-gray-600 cursor-pointer hover:scale-105  transition-all">
-              {theme === "dark" ? (
-                <span>
-                  <FaMoon onClick={() => setTheme("light")} />
-                </span>
-              ) : (
-                <span>
-                  <BsFillSunFill onClick={() => setTheme("dark")} />
-                </span>
-              )}
+          <div className="text-xl md:text-2xl text-gray-600 cursor-pointer hover:scale-105  transition-all z-50">
+            {theme === "dark" ? (
+              <span>
+                <FaMoon onClick={() => setTheme("light")} />
+              </span>
+            ) : (
+              <span>
+                <BsFillSunFill onClick={() => setTheme("dark")} />
+              </span>
+            )}
           </div>
         </div>
         {/* nevbar right site  */}

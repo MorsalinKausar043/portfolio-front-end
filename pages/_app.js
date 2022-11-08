@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navigation/Navbar";
 import Icons from "../components/innerIcon/Icons";
 import Footer from "../components/footer/Footer";
+import Image from "next/image";
 
 function MyApp({ Component, pageProps }) {
   // load state setup
@@ -36,7 +37,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider attribute="class">
         <Layout>
-          <main className="pt-0 md:pt-16 lg:pt-20 w-screen transition-opacity flex flex-col items-center bg-gray-200 dark:bg-zinc-900 h-screen overflow-y-scroll">
+          <main className="pt-0 md:pt-16 relative lg:pt-20 w-screen transition-opacity flex flex-col items-center bg-gray-200 dark:bg-zinc-900 h-screen overflow-y-scroll">
             <section className="container relative md:shadow-2xl md:rounded-lg bg-white dark:bg-zinc-800 p-4 md:px-8 md:py-4">
               {/* nevbar  */}
               <div>
