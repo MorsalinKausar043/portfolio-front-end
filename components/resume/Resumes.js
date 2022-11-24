@@ -101,7 +101,7 @@ const Resumes = () => {
           {/* left site  */}
           <div className="px-3 py-2 bg-gray-500 text-white text-md font-bold rounded-sm">
             <a
-              href="https://drive.google.com/file/d/1N5IwqraUjxz6iGNZzp0Ys7ePjotPvOLn/view?usp=sharing"
+              href="https://drive.google.com/uc?export=download&id=1N5IwqraUjxz6iGNZzp0Ys7ePjotPvOLn"
               target="blacnk"
               className="text-md font-semibold"
             >
